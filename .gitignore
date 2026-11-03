@@ -1,0 +1,127 @@
+# =============================================================
+# NeuroLab Enterprise - .gitignore
+# =============================================================
+# Decision del equipo (Grupo 04 - Senati): los archivos .env NO
+# se ignoran, a proposito, para que el grupo comparta la
+# configuracion. Ver advertencia abajo.
+# =============================================================
+
+# ----------------------------------------------------------------
+# >>> ADVERTENCIA <<<
+# Al no ignorar .env, cualquier clave, token o contrasena que se
+# escriba ahi se sube a GitHub y queda en el historial PARA SIEMPRE,
+# visible para todo el grupo (y para el publico si el repo es abierto).
+# Regla practica: en .env solo valores locales y sin valor real
+# (database localhost, puertos, rutas). Las credenciales verdaderas
+# van en variables de entorno de la maquina o en Secrets de GitHub.
+# Si alguna vez subiste una llave por error: revocala, no basta con
+# borrar el archivo en un commit nuevo.
+# ----------------------------------------------------------------
+
+# ----------------------------------------------------------------
+# Dependencias (se reinstalan con npm install / pip install)
+# ----------------------------------------------------------------
+node_modules/
+bower_components/
+jspm_packages/
+.npm/
+.pnp
+.pnp.js
+
+# Entornos virtuales de Python
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+
+# ----------------------------------------------------------------
+# Artefactos de build
+# ----------------------------------------------------------------
+dist/
+build/
+.next/
+.nuxt/
+.out/
+*.tsbuildinfo
+.vite/
+.eslintcache
+.stylelintcache
+
+# ----------------------------------------------------------------
+# Python / backend
+# ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# ----------------------------------------------------------------
+# Machine Learning: datasets, pesos y artefactos generados
+# (las carpetas se conservan gracias a .gitkeep)
+# ----------------------------------------------------------------
+data/models/*
+!data/models/.gitkeep
+data/uploads/*
+!data/uploads/.gitkeep
+*.h5
+*.keras
+*.pt
+*.pth
+*.onnx
+*.pkl
+*.joblib
+*.npy
+*.npz
+wandb/
+mlruns/
+runs/
+lightning_logs/
+
+# ----------------------------------------------------------------
+# Bases de datos locales y logs
+# ----------------------------------------------------------------
+*.sqlite
+*.sqlite3
+*.db
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ----------------------------------------------------------------
+# Entorno local del sistema operativo / editor
+# ----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+
+# Sincronizacion (Syncthing): contiene IDs y claves de dispositivo
+.sync/
+.stfolder
+.stignore
+
+# ----------------------------------------------------------------
+# Archivos temporales del proyecto
+# ----------------------------------------------------------------
+tmp/
+temp/
+*.tmp
+.cache/

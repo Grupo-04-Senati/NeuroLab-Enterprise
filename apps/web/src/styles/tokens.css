@@ -1,0 +1,181 @@
+/* ==========================================================================
+   NeuroLab Enterprise · Design tokens
+   Paleta corporativa: superficie clara, barra de navegación azul petróleo,
+   acento índigo para acción y cian para datos.
+   ========================================================================== */
+
+:root {
+  /* --- Primitivas de color ------------------------------------------------ */
+  --c-slate-0: #ffffff;
+  --c-slate-50: #f8fafc;
+  --c-slate-100: #f1f5f9;
+  --c-slate-200: #e2e8f0;
+  --c-slate-300: #cbd5e1;
+  --c-slate-400: #94a3b8;
+  --c-slate-500: #64748b;
+  --c-slate-600: #475569;
+  --c-slate-700: #334155;
+  --c-slate-800: #1e293b;
+  --c-slate-900: #0f172a;
+  --c-slate-950: #0b1524;
+
+  --c-indigo-100: #e0e7ff;
+  --c-indigo-200: #c7d2fe;
+  --c-indigo-400: #818cf8;
+  --c-indigo-500: #6366f1;
+  --c-indigo-600: #4f46e5;
+  --c-indigo-700: #4338ca;
+
+  --c-sky-100: #e0f2fe;
+  --c-sky-300: #7dd3fc;
+  --c-sky-400: #38bdf8;
+  --c-sky-500: #0ea5e9;
+  --c-sky-700: #0369a1;
+
+  --c-emerald-100: #d1fae5;
+  --c-emerald-500: #10b981;
+  --c-emerald-600: #059669;
+  --c-emerald-700: #047857;
+
+  --c-amber-100: #fef3c7;
+  --c-amber-500: #f59e0b;
+  --c-amber-600: #d97706;
+  --c-amber-700: #b45309;
+
+  --c-rose-100: #ffe4e6;
+  --c-rose-500: #f43f5e;
+  --c-rose-600: #e11d48;
+  --c-rose-700: #be123c;
+
+  --c-violet-100: #ede9fe;
+  --c-violet-500: #8b5cf6;
+  --c-violet-700: #6d28d9;
+
+  /* --- Semántica de superficie -------------------------------------------- */
+  --canvas: var(--c-slate-100);
+  --canvas-elevated: var(--c-slate-50);
+  --surface: var(--c-slate-0);
+  --surface-muted: var(--c-slate-50);
+  --surface-hover: var(--c-slate-100);
+  --surface-sunken: #eaeef5;
+
+  --border-subtle: var(--c-slate-200);
+  --border-strong: var(--c-slate-300);
+  --border-focus: var(--c-indigo-500);
+
+  --text-primary: var(--c-slate-900);
+  --text-secondary: var(--c-slate-600);
+  --text-tertiary: var(--c-slate-400);
+  --text-inverse: var(--c-slate-50);
+  --text-brand: var(--c-indigo-700);
+
+  /* --- Acción y datos ------------------------------------------------------- */
+  --brand: var(--c-indigo-600);
+  --brand-hover: var(--c-indigo-700);
+  --brand-soft: var(--c-indigo-100);
+  --brand-ring: rgba(99, 102, 241, 0.35);
+  --data: var(--c-sky-500);
+  --data-soft: var(--c-sky-100);
+
+  /* --- Barre lateral invertida -------------------------------------------- */
+  --nav-bg: var(--c-slate-950);
+  --nav-bg-elevation: #12203a;
+  --nav-text: #9fb0c9;
+  --nav-text-active: #ffffff;
+  --nav-hover-bg: rgba(148, 163, 184, 0.12);
+  --nav-active-bg: rgba(99, 102, 241, 0.22);
+  --nav-border: rgba(148, 163, 184, 0.16);
+  --nav-width: 264px;
+  --nav-peek-width: 26px;
+
+  /* --- Estado de negocio (máquina de estados RN-02) ------------------------ */
+  --st-queued: var(--c-slate-500);
+  --st-queued-soft: var(--c-slate-100);
+  --st-preparing: var(--c-amber-600);
+  --st-preparing-soft: var(--c-amber-100);
+  --st-running: var(--c-indigo-600);
+  --st-running-soft: var(--c-indigo-100);
+  --st-completed: var(--c-emerald-600);
+  --st-completed-soft: var(--c-emerald-100);
+  --st-failed: var(--c-rose-600);
+  --st-failed-soft: var(--c-rose-100);
+  --st-cancelled: var(--c-slate-500);
+  --st-cancelled-soft: var(--c-slate-100);
+
+  --success: var(--c-emerald-600);
+  --warning: var(--c-amber-600);
+  --danger: var(--c-rose-600);
+  --info: var(--c-sky-600, #0284c7);
+
+  /* --- Tipografía ----------------------------------------------------------- */
+  --font-sans: 'Inter', 'Segoe UI Variable', 'Segoe UI', system-ui, -apple-system,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Cascadia Code', ui-monospace, SFMono-Regular, Consolas,
+    monospace;
+
+  --fs-display: clamp(1.5rem, 1.25rem + 1.1vw, 2rem);
+  --fs-h1: clamp(1.25rem, 1.08rem + 0.72vw, 1.5625rem);
+  --fs-h2: clamp(1.0625rem, 0.98rem + 0.36vw, 1.25rem);
+  --fs-h3: 1.0625rem;
+  --fs-body: 0.9375rem;
+  --fs-sm: 0.8125rem;
+  --fs-xs: 0.75rem;
+  --fs-2xs: 0.6875rem;
+  --fs-metric: clamp(1.75rem, 1.5rem + 1.2vw, 2.25rem);
+
+  --lh-tight: 1.2;
+  --lh-snug: 1.4;
+  --lh-normal: 1.6;
+  --tracking-wide: 0.06em;
+  --tracking-caps: 0.09em;
+
+  /* --- Espaciado, radio, elevación ---------------------------------------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-7: 2rem;
+  --sp-8: 2.5rem;
+  --sp-9: 3rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.05);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.07), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.07), 0 2px 4px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.12), 0 4px 8px rgba(15, 23, 42, 0.05);
+  --shadow-nav: 0 0 40px rgba(2, 8, 20, 0.5);
+
+  /* --- Layout -------------------------------------------------------------- */
+  --header-h: 64px;
+  --page-max: 1560px;
+  --z-nav: 60;
+  --z-scrim: 55;
+  --z-header: 40;
+  --z-popover: 70;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+}
+
+/* Grupos de breakpoint reutilizables en queries. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 1ms;
+    --dur-base: 1ms;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+}

@@ -1,0 +1,19 @@
+# API y orquestación
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+
+# ORM y migraciones (PostgreSQL en producción, SQLite en desarrollo)
+sqlalchemy
+alembic
+psycopg2-binary
+
+# Motor de ingesta y preprocesamiento CSV
+pandas
+numpy
+scikit-learn
+joblib
+
+# Motor de entrenamiento
+tensorflow
